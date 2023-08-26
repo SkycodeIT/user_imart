@@ -107,12 +107,17 @@ class _MainDrawerState extends State<MainDrawer> {
                   // await launchWebUrl(
                   //   'https://greenhouse.org.in/privacy-policy',
                   // );
-                  Navigator.of(context, rootNavigator: true).pushAndRemoveUntil(
+                  Navigator.of(context, rootNavigator: true).push(
                     NoAnimationMaterialPageRoute(
                       builder: (context) => LegalPolicies(),
                     ),
-                    (route) => false,
                   );
+                  // Navigator.of(context, rootNavigator: true).pushAndRemoveUntil(
+                  //   NoAnimationMaterialPageRoute(
+                  //     builder: (context) => LegalPolicies(),
+                  //   ),
+                  //   (route) => false,
+                  // );
                 },
               ),
               const Padding(
@@ -123,11 +128,16 @@ class _MainDrawerState extends State<MainDrawer> {
                 ImagePath.icInfo,
                 'About us',
                 () async {
-                  Navigator.of(context, rootNavigator: true).pushAndRemoveUntil(
+                  // Navigator.of(context, rootNavigator: true).pushAndRemoveUntil(
+                  //   NoAnimationMaterialPageRoute(
+                  //     builder: (context) => AboutUs(),
+                  //   ),
+                  //   (route) => false,
+                  // );
+                  Navigator.of(context, rootNavigator: true).push(
                     NoAnimationMaterialPageRoute(
                       builder: (context) => AboutUs(),
                     ),
-                    (route) => false,
                   );
                 },
               ),
